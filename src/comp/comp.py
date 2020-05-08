@@ -38,7 +38,7 @@ print(a, "\n")
 # whose name ends in "e".
 print("Ends with e:")
 
-b = [x.name for x in humans if (x.name[len(x.name)-1]) == 'e']
+b = [x.name for x in humans if (x.name[-1]) == 'e']
 # with for loops
 for x in humans:
     if (x.name[len(x.name)-1]) == 'e':
@@ -51,7 +51,7 @@ print(b, "\n")
 # whose name starts with any letter between 'C' and 'G' inclusive.
 print("Starts between C and G, inclusive:")
 # c = []
-c = [x.name for x in humans if x.name[0] == 'C' and 'G']
+c = [x.name for x in humans if x.name[0] in ['C', 'D', 'E', 'F', 'G']]
 
 # print(c, "\n")
 print(c)
@@ -89,6 +89,6 @@ print(g)
 
 # Write a list comprehension that contains the square root of all the ages.
 print("Square root of ages:")
-h = [x.age**2 for x in humans]
+h = [x.age**0.5 for x in humans]
 # print(h, "\n")
 print(h)
