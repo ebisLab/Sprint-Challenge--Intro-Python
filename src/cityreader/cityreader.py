@@ -35,7 +35,8 @@ def cityreader(cities=[]):
 
     with open('cities.csv') as f:
         r = csv.reader(f)
-        next(r, None)  # skips
+        # skips to next row, csv has the attributes and we dont want them added to the array list
+        next(r, None)
         for line in r:
             cities.append(City(line[0], float(line[3]), float(line[4])))
     return cities
